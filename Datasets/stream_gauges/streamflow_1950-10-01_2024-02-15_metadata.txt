@@ -1,0 +1,31 @@
+#
+#
+# US Geological Survey
+# retrieved: 2024-02-15 09:54:35 EST
+# URL: https://nwis.waterdata.usgs.gov/ky/nwis/uv
+#
+# The Site File stores location and general information about groundwater,
+# surface water, and meteorological sites
+# for sites in Kentucky.
+#
+# The following selected fields are included in this output:
+#
+#  site_no         -- Site identification number
+#  station_nm      -- Site name
+#  dec_lat_va      -- Decimal latitude
+#  dec_long_va     -- Decimal longitude
+#  coord_acy_cd    -- Latitude-longitude accuracy
+#  dec_coord_datum_cd -- Decimal Latitude-longitude datum
+#  alt_va          -- Altitude of Gage/land surface
+#  alt_acy_va      -- Altitude accuracy
+#  alt_datum_cd    -- Altitude datum
+#  huc_cd          -- Hydrologic unit code
+#  basin_cd        -- Drainage basin code
+#  rt_bol          -- Real-time data flag
+#
+#
+# query started 2024-02-15 09:54:35 EST
+#
+# there are 227 sites matching the search criteria.
+#
+#

@@ -1,0 +1,15 @@
+name: watersheds
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - geopandas
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - pysal
+  - python
+  - rasterio
+  - scipy
+  - statsmodels
