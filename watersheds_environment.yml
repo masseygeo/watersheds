@@ -3,13 +3,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python
+  - gdal
   - geopandas
-  - jupyterlab
   - matplotlib
   - numpy
   - pandas
-  - pysal
-  - python
   - rasterio
+  - richdem
+  - scikit-learn
   - scipy
-  - statsmodels
+  - jupyterlab
+  - rasterstats
