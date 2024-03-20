@@ -1,0 +1,9 @@
+Datasets/dem_10m/*.tif
+Datasets/terrain_features/*.tfw
+Datasets/terrain_features/*.tif
+Datasets/terrain_features/*.xml
+Datasets/terrain_features/*.CPG
+Datasets/terrain_features/*.dbf
+Datasets/terrain_features/*.ovr
+Datasets/stream_gauges/GageHeight/*.csv
+Datasets/stream_gauges/Streamflow/*.csv
