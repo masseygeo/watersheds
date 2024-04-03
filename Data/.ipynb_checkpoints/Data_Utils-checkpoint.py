@@ -59,32 +59,64 @@ def get_stream_gauge_locations(save_dir, data='gage height', state='ky', begin_d
 
 def get_stream_gage_data(gage_id, save_dir, data='gage height', begin_date='1950-10-01', end_date=datetime.today().strftime('%Y-%m-%d')):
 
+    # handle missing directory from save_dir parameter
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    # get data type from data parameter
     if data == 'gage height':
+        parameter_id = '00065'
+    
+    if data == 'streamflow':
+        parameter_id = '00060'
 
-        url = f"https://waterservices.usgs.gov/nwis/iv/?sites={gage_id}&parameterCd=00065&startDT={begin_date}T00:00:00.176-05:00&endDT={end_date}T00:00:00.176-05:00&siteStatus=all&format=rdb"
+    # format url using gage_id, parameter_id, begin_date, and end_date parameters
+    url = f"https://waterservices.usgs.gov/nwis/iv/?sites={gage_id}&parameterCd={parameter_id}&startDT={begin_date}T00:00:00.176-05:00&endDT={end_date}T00:00:00.176-05:00&siteStatus=all&format=rdb"
 
-        data_path = os.path.join(
-            save_dir, f'{gage_id}_gage_height_{begin_date}_{end_date}.csv')
+    # create path to save data as .csv file
+    data_path = os.path.join(save_dir, f"{gage_id}_{data.replace(' ','')}_{begin_date}_{end_date}.csv")
 
-    elif data == 'streamflow':
-
-        url = f"https://waterservices.usgs.gov/nwis/iv/?sites={gage_id}&parameterCd=00060&startDT={begin_date}T00:00:00.176-05:00&endDT={end_date}T00:00:00.176-05:00&siteStatus=all&format=rdb"
-
-        data_path = os.path.join(
-            save_dir, f'{gage_id}_streamflow_{begin_date}_{end_date}.csv')
-
+    # submit request for response using url
     response = requests.get(url)
-    text_data = response.text
-    lines = text_data.splitlines()
 
-    with open(data_path, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        for line in lines:
-            if not line.startswith('#') and line.strip():
+    # if response is valid then proceed with data scraping
+    if response.status_code == 200:
+
+        # convert response to text
+        text_data = response.text
+
+        # split text into lines
+        lines = text_data.splitlines()
+
+        # initialize counter for non-comment line numbers
+        non_comment_line_counter = 0
+
+        # write data from response to file (in-memory)
+        with open(data_path, 'w', newline='') as csvfile:
+
+            # initialize csv writer from text
+            csvwriter = csv.writer(csvfile)
+
+            # iterate through lines from response/text
+            for line in lines:
+
+                # skip comment lines starting with # or blank lines
+                if line.startswith('#') or not line.strip():
+                    continue
+
+                # if line is not a comment or blank, increase the line number counter
+                non_comment_line_counter += 1
+
+                # first line is header info, which is kept; second line is meaningless, which is skipped here
+                if non_comment_line_counter == 2:
+                    continue
+
+                # split lines into new lines using a tab
                 data = line.split('\t')
-                csvwriter.writerow(data)
 
-    return data_path
+                # write line to csv file
+                csvwriter.writerow(data)
+    
 
 
 def mosaic_dem_tiles(input_dir, output_path):

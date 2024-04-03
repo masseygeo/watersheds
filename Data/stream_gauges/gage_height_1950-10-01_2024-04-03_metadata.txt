@@ -1,7 +1,7 @@
 #
 #
 # US Geological Survey
-# retrieved: 2024-02-15 09:54:35 EST
+# retrieved: 2024-04-03 09:09:13 EDT
 # URL: https://nwis.waterdata.usgs.gov/ky/nwis/uv
 #
 # The Site File stores location and general information about groundwater,
@@ -24,8 +24,8 @@
 #  rt_bol          -- Real-time data flag
 #
 #
-# query started 2024-02-15 09:54:35 EST
+# query started 2024-04-03 09:09:13 EDT
 #
-# there are 227 sites matching the search criteria.
+# there are 252 sites matching the search criteria.
 #
 #
