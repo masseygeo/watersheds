@@ -6,7 +6,7 @@
 **Workflow using .ipynb notebooks should be followed in order...**
 1. [Data](./Data)
     1. [DataScraping_Spatial](./Data/DataScraping_Spatial.ipynb)
-        1. *Download spatial data including digital elevation model tiles, watershed boundaries, and political boundaries.*
+        1. *Download spatial data including digital elevation model (DEM) tiles, watershed boundaries, and political boundaries.*
     3. [DataScraping_StreamGauges](./Data/DataScraping_StreamGauges.ipynb)
     4. [PreProcessing_Spatial](./Data/PreProcessing_Spatial.ipynb)
     5. [PreProcessing_StreamGauges](./Data/PreProcessing_StreamGauges.ipynb)
