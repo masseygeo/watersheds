@@ -12,7 +12,7 @@ Workflow using .ipynb notebooks should be followed in order...
     4. [PreProcessing_StreamGauges](./Data/PreProcessing_StreamGauges.ipynb)
 2. [TerrainFeatures](./TerrainFeatures)
     1. [TerrainFeatures](./TerrainFeatures/TerrainFeatures.ipynb)
-3. WatershedClustering
-    1. ZonalStatistics
-4. ElevatedStreamFlowEvents
-    1. ELevatedStreamFlowEvents
+3. [WatershedClustering](./WatershedClustering)
+    1. [ZonalStatistics](./WatershedClustering/ZonalStatistics.ipynb)
+4. [ElevatedStreamFlowEvents](./ElevatedStreamFlowEvents)
+    1. [ELevatedStreamFlowEvents](./ElevatedStreamFlowEvents/ElevatedStreamFlowEvents.ipynb)
