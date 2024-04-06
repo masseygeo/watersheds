@@ -158,3 +158,10 @@ def mosaic_dem_tiles(input_dir, output_path):
 
     for dem in tiles_datasets:
         dem.close()
+
+
+def is_url_valid(url):
+    
+    response = requests.head(url, allow_redirects=True)
+    
+    return response.status_code == 200

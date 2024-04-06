@@ -1,4 +1,5 @@
-Data/dem_tiles/USGS*.tif
-Data/terrain_features/*.tif
+Data/dem_10m/*.tif
+Data/ky_boundaries/boundaries_shapefiles
+Data/nhd/nhd_shapefiles
 Data/stream_gauges/gauge_height/*.csv
 Data/stream_gauges/streamflow/*.csv

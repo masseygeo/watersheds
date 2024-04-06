@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metadata SYSTEM "https://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.dtd">
+<metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin>U.S. Geological Survey, National Geospatial Technical Operations Center</origin>
+                <pubdate>20240215</pubdate>
+                <title>USGS National Boundary Dataset (NBD) in Kentucky State or Territory (published 20240215) Shapefile</title>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace>Reston, VA</pubplace>
+                    <publish>U.S. Geological Survey</publish>
+                </pubinfo>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Geospatial data is comprised of government boundaries.</abstract>
+            <purpose>It is a general purpose dataset for users who are not GIS experts. The geospatial data are from selected National Map data holdings and other government sources.</purpose>
+            <supplinf>This data set is comprised of government boundaries.</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <rngdates>
+                    <begdate>20240215</begdate>
+                    <enddate>20240215</enddate>
+                </rngdates>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>Irregular</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-89.57120</westbc>
+                <eastbc>-81.96479</eastbc>
+                <northbc>39.14773</northbc>
+                <southbc>36.49706</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>ISO 19115 Topic Category</themekt>
+                <themekey>boundaries</themekey>
+            </theme>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>political and administrative boundaries</themekey>
+                <themekey>legal land descriptions</themekey>
+                <themekey>land use maps</themekey>
+                <themekey>zoning maps</themekey>
+                <themekey>cadastral surveys</themekey>
+                <themekey>land ownership</themekey>
+                <themekey>geographic names</themekey>
+                <themekey>boundary</themekey>
+                <themekey>Public Land Survey System</themekey>
+                <themekey>U.S. National Grid</themekey>
+                <themekey>County or Equivalent</themekey>
+                <themekey>Incorporated Place</themekey>
+                <themekey>Jurisdictional</themekey>
+                <themekey>Minor Civil Division</themekey>
+                <themekey>Native American Area</themekey>
+                <themekey>PLSS First Division</themekey>
+                <themekey>PLSS Special Survey</themekey>
+                <themekey>PLSS Township</themekey>
+                <themekey>Reserve</themekey>
+                <themekey>State or Territory</themekey>
+                <themekey>Unincorporated Place</themekey>
+                <themekey>National Boundary Dataset (NBD)</themekey>
+                <themekey>State</themekey>
+                <themekey>Esri Shapefile nan</themekey>
+            </theme>
+            <place>
+                <placekt>Geographic Names Information System</placekt>
+                <placekey>United States</placekey>
+                <placekey>US</placekey>
+                <placekey>KY</placekey>
+                <placekey>Kentucky</placekey>
+                <placekey>Adair</placekey>
+                <placekey>Allen</placekey>
+                <placekey>Anderson</placekey>
+                <placekey>Ballard</placekey>
+                <placekey>Barren</placekey>
+                <placekey>Bath</placekey>
+                <placekey>Bell</placekey>
+                <placekey>Boone</placekey>
+                <placekey>Bourbon</placekey>
+                <placekey>Boyd</placekey>
+                <placekey>Boyle</placekey>
+                <placekey>Bracken</placekey>
+                <placekey>Breathitt</placekey>
+                <placekey>Breckinridge</placekey>
+                <placekey>Bullitt</placekey>
+                <placekey>Butler</placekey>
+                <placekey>Caldwell</placekey>
+                <placekey>Calloway</placekey>
+                <placekey>Campbell</placekey>
+                <placekey>Carlisle</placekey>
+                <placekey>Carroll</placekey>
+                <placekey>Carter</placekey>
+                <placekey>Casey</placekey>
+                <placekey>Christian</placekey>
+                <placekey>Clark</placekey>
+                <placekey>Clay</placekey>
+                <placekey>Clinton</placekey>
+                <placekey>Crittenden</placekey>
+                <placekey>Cumberland</placekey>
+                <placekey>Daviess</placekey>
+                <placekey>Edmonson</placekey>
+                <placekey>Elliott</placekey>
+                <placekey>Estill</placekey>
+                <placekey>Fayette</placekey>
+                <placekey>Fleming</placekey>
+                <placekey>Floyd</placekey>
+                <placekey>Franklin</placekey>
+                <placekey>Fulton</placekey>
+                <placekey>Gallatin</placekey>
+                <placekey>Garrard</placekey>
+                <placekey>Grant</placekey>
+                <placekey>Graves</placekey>
+                <placekey>Grayson</placekey>
+                <placekey>Green</placekey>
+                <placekey>Greenup</placekey>
+                <placekey>Hancock</placekey>
+                <placekey>Hardin</placekey>
+                <placekey>Harlan</placekey>
+                <placekey>Harrison</placekey>
+                <placekey>Hart</placekey>
+                <placekey>Henderson</placekey>
+                <placekey>Henry</placekey>
+                <placekey>Hickman</placekey>
+                <placekey>Hopkins</placekey>
+                <placekey>Jackson</placekey>
+                <placekey>Jefferson</placekey>
+                <placekey>Jessamine</placekey>
+                <placekey>Johnson</placekey>
+                <placekey>Kenton</placekey>
+                <placekey>Knott</placekey>
+                <placekey>Knox</placekey>
+                <placekey>Larue</placekey>
+                <placekey>Laurel</placekey>
+                <placekey>Lawrence</placekey>
+                <placekey>Lee</placekey>
+                <placekey>Leslie</placekey>
+                <placekey>Letcher</placekey>
+                <placekey>Lewis</placekey>
+                <placekey>Lincoln</placekey>
+                <placekey>Livingston</placekey>
+                <placekey>Logan</placekey>
+                <placekey>Lyon</placekey>
+                <placekey>Madison</placekey>
+                <placekey>Magoffin</placekey>
+                <placekey>Marion</placekey>
+                <placekey>Marshall</placekey>
+                <placekey>Martin</placekey>
+                <placekey>Mason</placekey>
+                <placekey>McCracken</placekey>
+                <placekey>McCreary</placekey>
+                <placekey>McLean</placekey>
+                <placekey>Meade</placekey>
+                <placekey>Menifee</placekey>
+                <placekey>Mercer</placekey>
+                <placekey>Metcalfe</placekey>
+                <placekey>Monroe</placekey>
+                <placekey>Montgomery</placekey>
+                <placekey>Morgan</placekey>
+                <placekey>Muhlenberg</placekey>
+                <placekey>Nelson</placekey>
+                <placekey>Nicholas</placekey>
+                <placekey>Ohio</placekey>
+                <placekey>Oldham</placekey>
+                <placekey>Owen</placekey>
+                <placekey>Owsley</placekey>
+                <placekey>Pendleton</placekey>
+                <placekey>Perry</placekey>
+                <placekey>Pike</placekey>
+                <placekey>Powell</placekey>
+                <placekey>Pulaski</placekey>
+                <placekey>Robertson</placekey>
+                <placekey>Rockcastle</placekey>
+                <placekey>Rowan</placekey>
+                <placekey>Russell</placekey>
+                <placekey>Scott</placekey>
+                <placekey>Shelby</placekey>
+                <placekey>Simpson</placekey>
+                <placekey>Spencer</placekey>
+                <placekey>Taylor</placekey>
+                <placekey>Todd</placekey>
+                <placekey>Trigg</placekey>
+                <placekey>Trimble</placekey>
+                <placekey>Union</placekey>
+                <placekey>Warren</placekey>
+                <placekey>Washington</placekey>
+                <placekey>Wayne</placekey>
+                <placekey>Webster</placekey>
+                <placekey>Whitley</placekey>
+                <placekey>Wolfe</placekey>
+                <placekey>Woodford</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>None. However, users should be aware that temporal changes may have occurred since this data set was collected and that some parts of this data may no longer represent actual surface conditions. Users should not use this data for critical applications without a full awareness of its limitations. Acknowledgment of the U.S. Geological Survey would be appreciated for products derived from these data.</useconst>
+        <browse>
+            <browsen>https://prd-tnm.s3.amazonaws.com/StagedProducts/GovtUnit/Shape/GOVTUNIT_Kentucky_State_Shape.jpg</browsen>
+            <browsed>Thumbnail JPG image</browsed>
+            <browset>JPEG</browset>
+        </browse>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Content is derived from USGS national geospatial databases. The data is owned and hosted by the USGS, but does not preclude using data sources owned and hosted by other organizations, provided that these sources have been approved by the USGS data program.</attraccr>
+        </attracc>
+        <logic>The data is extracted and codified according to USGS standards.</logic>
+        <complete>The Governmental Units Dataset is national in scope, with complete coverage of the conterminous 48 states, Hawaii, and Puerto Rico. Each layer is extracted from the USGS national geospatial databases.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>This product meets National Map Accuracy Standards (NMAS). NMAS horizontal accuracy requires that at least 90 percent of well-defined points tested are within 0.02 inch of the true position.</horizpar>
+            </horizpa>
+            <vertacc>
+                <vertaccr>Vertical accuracy is not applicable to this dataset.</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>International Boundary Commission</origin>
+                        <pubdate>2018</pubdate>
+                        <title>U.S.-Canada National Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The boundary is a digital representation of the International boundary between the United States and Canada as per the Treaty of 1908. It has been generated from a combination of recent surveys and datum conversions. It is intended for mapping purposes only. The boundary dataset is composed of 29 segments that correspond to the original 256 boundary maps. Attributes of each segment define the scale in which the line in that area may be accurately depicted. It is produced for mapping purposes only and not intended to illustrate the boundary beyond the limits of the scale for any given segment.</othercit>
+                        <onlink>http://www.internationalboundarycommission.org/</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2015</begdate>
+                            <enddate>2018</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>U.S. / Canada International Boundary</srccitea>
+                <srccontr>International Boundary between Canada and the United States</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>International Boundary and Water Commission, United States and Mexico; National Institute of Geography and Statistics, Mexico; USGS</origin>
+                        <pubdate>2022</pubdate>
+                        <title>U.S.-Mexico National Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>This dataset represents the international boundary between the United States of America and the United States of Mexico.This feature class is a digital representation of the international boundary between the United States and Mexico in accordance with the 1970 Treaty (Treaty to Resolve Pending Boundary Differences and Maintain the Rio Grande and Colorado River as the International Boundary). It has been generated from a combination of recent surveys and datum conversions. It is intended for mapping purposes only.</othercit>
+                        <onlink>https://ibwc.gov/GIS_Maps/GIS_Program.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2022</begdate>
+                            <enddate>2022</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>U.S. / Mexico International Boundary</srccitea>
+                <srccontr>International Boundary between Mexico and the United States</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Department of Agriculture (USDA) Forest Service - Washington Office Automated Lands Program (ALP).</origin>
+                        <pubdate>2017</pubdate>
+                        <title>USDA Forest Service Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The forest service boundaries defined by the USDA Forest Service encompass the National Forest System (NFS) lands within the original Proclaimed National Forests, along with lands added to the NFS which have taken on the status of 'reserved from the public domain' under the General Exchange Act. PROCLAIMED boundaries (e.g. ProclaimedForest and ProclaimedForest_Grassland) encompass areas of National Forest System land that is set aside and reserved from public domain by executive order or proclamation. The nationwide Proclaimed Forest dataset was created by the USDA Forest Service, Washington Office Automated Lands Program (ALP) staff from collected source data created by the Regional Offices. These geospatial data and related maps or graphics are not legal documents and are not intended to be used as such. The user is responsible to verify the limitations of the geospatial data and to use the data accordingly. Only maps in USDA Forest Service areas will contain USDA Forest boundaries.</othercit>
+                    </citeinfo>
+                </srccite>
+                <srcscale>24000</srcscale>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2009</begdate>
+                            <enddate>2017</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>USDA Forest Service Boundaries</srccitea>
+                <srccontr>National Forest Service Boundaries</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>Office of the Deputy Under Secretary of Defense for Installations and Environment, Business Enterprise Integration Directorate</origin>
+                        <pubdate>2020</pubdate>
+                        <title>U.S. Military Installations, Ranges, and Training Areas</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>This dataset depicts the authoritative boundaries of the most commonly known Department of Defense (DoD) sites, installations, ranges, and training areas in the United States and Territories. These sites encompass land which is federally owned or otherwise managed. This dataset was compiled by the Defense Installation Spatial Data Infrastructure (DISDI) Program. This dataset represents the baseline for georeferenced boundaries of sites selected from the 2010 Base Structure Report. The boundary locations are intended for planning purposes only and do not represent the legal or surveyed land parcel boundaries. This list does not necessarily represent a comprehensive collection of all DoD facilities, and only those in the fifty United States and US Territories were considered for inclusion. Maps produced at a scale of 1:50,000 or larger which otherwise comply with National Map Accuracy Standards will remain compliant if this data is incorporated. Although these data have been provided by the DoD components, no warranty expressed or implied is made regarding the utility of the data on any other system, in derived products or data alterations, nor shall the act of distribution constitute such warranty.</othercit>
+                        <onlink>https://www.acq.osd.mil/eie/BSI/BEI_DISDI.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <srcscale>50000</srcscale>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2011</begdate>
+                            <enddate>2020</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>U.S. Department of Defense Military Installations</srccitea>
+                <srccontr>Boundary lines, installation names</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>20220801</pubdate>
+                        <title>State and Equivalent Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The Census Bureau collects boundaries from state and county governments through the Boundary and Annexation Survey, and publishes the results as TIGER files. The USGS uses the TIGER data without editing or alteration.</othercit>
+                        <onlink>https://www2.census.gov/geo/tiger/TIGER2022/STATE/tl_2022_us_state.zip</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2021</begdate>
+                            <enddate>2022</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>State Boundaries</srccitea>
+                <srccontr>State and Equivalent Boundary</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>20220801</pubdate>
+                        <title>County and Equivalent Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The Census Bureau collects boundaries from state and county governments through the Boundary and Annexation Survey (BAS), and publishes the results as TIGER files. The USGS uses the TIGER data without editing or alteration for US Topo.</othercit>
+                        <onlink>https://www2.census.gov/geo/tiger/TIGER2022/COUNTY/tl_2022_us_county.zip</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2021</begdate>
+                            <enddate>2022</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>County Boundaries</srccitea>
+                <srccontr>County and Equivalent Boundary</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>2014</pubdate>
+                        <title>Incorporated Places Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The boundaries of most incorporated places are as of January 1, 2017, as reported through the Census Bureau's Boundary and Annexation Survey. Limited updates that occurred after January 1, 2017, such as newly incorporated places, are also included. The boundaries of all Census Designated Places (CDP) were delineated as part of the Census Bureau's Participant Statistical Areas Program (PSAP) for the 2010 Census. The USGS uses the TIGER data without editing or alteration.</othercit>
+                        <onlink>http://www.census.gov/geo/maps-data/data/tiger.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2013</begdate>
+                            <enddate>2017</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Incorporated Places Boundaries</srccitea>
+                <srccontr>Incorporated Places Boundaries</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>20160914</pubdate>
+                        <title>Jurisdictional Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The 115th Congress is seated from January 2017 to 2019. The TIGER/Line shapefiles for the District of Columbia, Puerto Rico, and the Island Areas (American Samoa, Guam, the Commonwealth of the Northern Mariana Islands, and the U.S. Virgin Islands) each contain a single record for the non-voting delegate district in these areas. The boundaries of all other congressional districts are provided to the Census Bureau through the Redistricting Data Program (RDP). The USGS uses the TIGER data without editing or alteration for US Topo.</othercit>
+                        <onlink>http://www.census.gov/geo/maps-data/data/tiger.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <srcscale>24000</srcscale>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2016</begdate>
+                            <enddate>2016</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Jurisdictional Boundaries</srccitea>
+                <srccontr>115th Congressional Districts Boundaries</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>2014</pubdate>
+                        <title>Minor Civil Divisions Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The boundaries of most legal Minor Civil Divisions (MCD) are as of January 1, 2017, as reported through the Census Bureau's Boundary and Annexation Survey. The boundaries of all Census Designated Places (CDP)are those as reported as part of the Census Bureau's Participant Statistical Areas Program (PSAP) for the 2010 Census. The USGS uses the TIGER data without editing or alteration.</othercit>
+                        <onlink>http://www.census.gov/geo/maps-data/data/tiger.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2013</begdate>
+                            <enddate>2017</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Minor Civil Divisions Boundaries</srccitea>
+                <srccontr>Minor Civil Divisions Boundaries</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>2014</pubdate>
+                        <title>Native American Area Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The Native American Area boundaries are as of January 1, 2017 as reported through Census Bureau's Boundary and Annexation Survey. The USGS dataset is a combination of two Census Bureau files. It includes the American Indian/Alaska Native/Native Hawaiian Areas National (AIANNH) National TIGER/Line shapefile, including the following legal entities: federally recognized American Indian reservations and off-reservation trust land areas, state-recognized American Indian reservations, and Hawaiian home lands. Also included is the Alaska Native Regional Corporation (ANRC) State-based TIGER/Line shapefile containing a record of the 12 Alaska Native Regional Corporations used to conduct both the for-profit and non-profit affairs of Alaska Natives within a defined region of Alaska. The USGS uses the TIGER data without editing or alteration.</othercit>
+                        <onlink>http://www.census.gov/geo/maps-data/data/tiger.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2013</begdate>
+                            <enddate>2017</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Native American Area Boundaries</srccitea>
+                <srccontr>Native American Area Boundaries</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Department of Commerce, U.S. Census Bureau, Geography Division, Spatial Data Collection and Products Branch</origin>
+                        <pubdate>20220801</pubdate>
+                        <title>Metlakatla Alaska Boundary</title>
+                        <geoform>Vector digital data</geoform>
+                        <othercit>This boundary depicts Metlakatla, AK, referred to as Annette Island in the Census AIANNH shapefile NAME attribute. The area is home of the Metlakatla Indian Community. The Census Bureau TIGER Line shapefiles and related database files are an extract of selected geographic and cartographic information from the US Census Bureau's Master Address File-Topologically Integrated Geographic Encoding and Referencing -MAF-TIGER- Database. The 2022 Census boundaries for federally recognized American Indian reservations and off reservation trust lands are as of August 1, 2022, as reported by the federally recognized tribal governments through the Census Bureau's Boundary and Annexation Survey. No warranty, expressed or implied is made with regard to the accuracy of these data, and no liability is assumed by the U.S. Government in general or the U.S. Census Bureau in specific as to the spatial or attribute accuracy of the data. The act of distribution shall not constitute any such warranty and no responsibility is assumed by the U.S. government in the use of these files. The boundary information in the TIGER-Line Shapefiles is for statistical data collection and tabulation purposes only. Their depiction and designation for statistical purposes do not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions</othercit>
+                        <onlink>https://www2.census.gov/geo/tiger/TIGER2022/AIANNH/tl_2022_us_aiannh.zip</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2021</begdate>
+                            <enddate>2022</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Metlakatla, AK boundary from TIGER Line Shapefile 2022, Nation, U.S., Current American Indian/Alaska Native/Native Hawaiian Areas (AIANNH) National</srccitea>
+                <srccontr>Boundary polygons and names</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>National Park Service - Land Resources Division</origin>
+                        <pubdate>2020</pubdate>
+                        <title>National Park Service Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>This dataset depicts National Park Service unit boundaries for display and general analysis purposes. The USGS converted areas of generally 3 acres or less to point features to facilitate cartographic display on the US Topo digital map product. See Source URL for link to complete dataset. This data set is complete but subject to continual updates to reflect boundary amendments, legislation, and acquisitions, and improved processing techniques. The data is being regularly updated with verified boundaries from NPS Land Resources Division. The data is intended for use as a tool for display and general GIS analysis purposes only. It is in no way intended for engineering or legal purposes. The data accuracy is checked against best available sources which may be dated. NPS assumes no liability for use of this data. Boundaries from the Land Resources Division have separate polygons for each type of unit. For example, Denali National Park and Denali National Preserve are separate, individual polygons.</othercit>
+                        <onlink>https://irma.nps.gov/App/Portal</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2002</begdate>
+                            <enddate>2020</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>National Park Service Boundary</srccitea>
+                <srccontr>Current Administrative Boundaries of the National Park System Units</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Census Bureau</origin>
+                        <pubdate>2014</pubdate>
+                        <title>Unincorporated Places Boundary</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The boundaries of most unincorporated places in this shapefile are as of January 1, 2017, as reported through the Census Bureau's Boundary and Annexation Survey (BAS). Limited updates that occurred after January 1, 2017, such as newly unincorporated places, are also included. The boundaries of all Census Designated Places (CDPs) were delineated as part of the Census Bureau's Participant Statistical Areas Program (PSAP) for the 2010 Census. The USGS uses the TIGER data without editing or alteration.</othercit>
+                        <onlink>http://www.census.gov/geo/maps-data/data/tiger.html</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2013</begdate>
+                            <enddate>2017</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Unincorporated Places Boundaries</srccitea>
+                <srccontr>Unincorporated Places Boundaries</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Department of Interior, U.S. Fish and Wildlife Service</origin>
+                        <pubdate>2020</pubdate>
+                        <title>FWS Interest Simplified Boundaries</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>These boundaries are simplified from the U.S. Fish and Wildlife Service Real Estate Interest data layer containing polygons representing tracts of land (parcels) in which the Service has a real estate interest. Interior boundaries between parcels were dissolved to produce a single set of simplified external boundaries for each feature. These are resource grade mapping representations of the U.S. Fish and Wildlife Service boundaries. For legal descriptions of the land represented here, contact the USFWS Realty Office. This map layer was compiled by the U.S. Fish and Wildlife Service. Although these boundaries represent lands administered by the U.S. Fish and Wildlife Service, not all areas are open to the public. Some fragile habitats need to be protected from human traffic and some management areas are closed. The public is urged to contact specific Refuges or other conservation areas before visiting.  The primary source for this information is the USFWS Realty program. Data can also be downloaded from ServCat, the FWS Catalog.</othercit>
+                        <onlink>https://www.fws.gov/gis/data/CadastralDB/index_cadastral.html</onlink>
+                        <onlink>https://gis.fws.gov/arcgis/rest/services/FWSCadastral_Internet/MapServer</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>1950</begdate>
+                            <enddate>2020</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>U. S. Fish and Wildlife Service Boundary</srccitea>
+                <srccontr>Boundary polygons and names</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>U.S. Dept. of Interior, Bureau of Land Management, Division of Support Services, Branch of Information Resource Management</origin>
+                        <pubdate>2021</pubdate>
+                        <title>Public Land Survey System</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>The PLSS information is for general reference purposes only, and should not be used to determine legal boundaries or land ownership. The Bureau of Land Management (BLM) is the authoritative source for PLSS information at the federal level, and the US Topo representation is derived from BLM GIS data files called Cadastral National Spatial Data Infrastructure or CadNSDI. The management of these data is not completely uniform throughout the country. Although this metadata record is included with all maps, PLSS is currently shown on US Topo Maps for only a few states. PLSS will be added to US Topo maps in more states in coming years as BLM authorized CadNSDI format is made available. The three layers USGS stores from PLSS are the Township, First Division and Special Surveys. Metadata for BLM PLSS data is at https://gbp-blm-egis.hub.arcgis.com. Alternate sources of PLSS data will continue to be served mainly in western states where BLM is the data steward or where the data is from a trusted source. Notes on individual states follow,----Alaska PLSS consists of protracted (computed, not surveyed) data only. For more information see http://sdms.ak.blm.gov/sdms ----Ohio was the original PLSS state in the early 1800s, and the land network there is unusually complex. The source data include four first-division parcel types. These are all shown on US Topo maps, and are labeled according to BLM's attribution, with a leading letter followed by either a number or more letters. The meanings of the leading letters are S=Section, F=Fractional Section, L=Lot, Q=Quarter Township.</othercit>
+                        <onlink>https://sdms.ak.blm.gov/sdms/</onlink>
+                        <onlink>https://gbp-blm-egis.hub.arcgis.com</onlink>
+                    </citeinfo>
+                </srccite>
+                <srcscale>24000</srcscale>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>20120522</begdate>
+                            <enddate>20200818</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Public Land Survey System - BLM</srccitea>
+                <srccontr>Townships and ranges, sections</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>Department of Veterans Affairs, National Cemetery Administration and U.S. Geological Survey</origin>
+                        <pubdate>2018</pubdate>
+                        <title>NCA National Cemeteries</title>
+                        <geoform>vector digital data</geoform>
+                        <othercit>This dataset represents boundaries of National cemeteries administered by the U.S. Department of Veterans Affairs, National Cemetery Administration. This layer may also contain a small number of boundaries for those managed by the Department of the Army. This data is subject to change as other national cemetery areas are authorized. This dataset is intended for general mapping and reference purposes only.</othercit>
+                        <onlink>https://nationalmap.gov/boundaries.html</onlink>
+                        <onlink>https://www.cem.va.gov/cem/cems/index.asp </onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>digital data</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>2013</begdate>
+                            <enddate>2018</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>National Cemetery Boundary</srccitea>
+                <srccontr>Name, general location information from NCA, Boundaries from combination of NCA boundary data, parcel data and other mapping datasets.</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>The data for this product are created as follows. All geospatial content is taken from national geospatial databases under the stewardship of USGS data programs. The vector data are processed using ESRI ArcGIS software and exported.</procdesc>
+                <procdate>20121105</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spref>
+        <horizsys>
+            <geograph>
+                <latres>0.00001</latres>
+                <longres>0.00001</longres>
+                <geogunit>Decimal degrees</geogunit>
+            </geograph>
+            <geodetic>
+                <horizdn>North American Datum of 1983</horizdn>
+                <ellips>Geodetic Reference System 80</ellips>
+                <semiaxis>6378137</semiaxis>
+                <denflat>298.2572221</denflat>
+            </geodetic>
+        </horizsys>
+    </spref>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Geological Survey, National Geospatial Technical Operations Center</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>Box 25046 Denver Federal Center</address>
+                    <city>Lakewood</city>
+                    <state>CO</state>
+                    <postal>80225</postal>
+                </cntaddr>
+                <cntvoice>1-888-ASK-USGS (1-888-275-8747)</cntvoice>
+                <cntemail>http://www.usgs.gov/ask/</cntemail>
+            </cntinfo>
+        </distrib>
+        <resdesc>Downloadable Data</resdesc>
+        <distliab>No liability for content or accuracy is presumed by USGS for data.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>Esri Shapefile</formname>
+                    <formvern>nan</formvern>
+                    <formcont>Spatial objects with unique identifiers and coordinate data.</formcont>
+                    <filedec>ZIP lossless data compression has been applied using a DEFLATE algorithm.</filedec>
+                    <transize>22.44</transize>
+                </digtinfo>
+                <digtopt>
+                    <onlinopt>
+                        <computer>
+                            <networka>
+                                <networkr>https://prd-tnm.s3.amazonaws.com/StagedProducts/GovtUnit/Shape/GOVTUNIT_Kentucky_State_Shape.zip</networkr>
+                            </networka>
+                        </computer>
+                    </onlinopt>
+                </digtopt>
+            </digform>
+            <fees>None</fees>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20240215</metd>
+        <metrd>20180730</metrd>
+        <metfrd>20190730</metfrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Geological Survey, National Geospatial Technical Operations Center</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>Box 25046 Denver Federal Center</address>
+                    <city>Lakewood</city>
+                    <state>CO</state>
+                    <postal>80225</postal>
+                </cntaddr>
+                <cntvoice>1-888-ASK-USGS (1-888-275-8747)</cntvoice>
+                <cntemail>http://www.usgs.gov/ask/</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+    </metainfo>
+</metadata>
