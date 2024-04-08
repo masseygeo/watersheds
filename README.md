@@ -2,7 +2,7 @@
 
 ***Matt Massey, Seun Adekunle, & Praneeth Bhatt***
 
-**Workflow using .ipynb notebooks should be followed in order...**
+Workflow in the following order...
 1. [Data](./Data)
     1. [DataScraping_Spatial](./Data/DataScraping_Spatial.ipynb)
         1. *Download spatial data including digital elevation model (DEM) tiles, watershed boundaries, and political boundaries.*
