@@ -1,24 +1,40 @@
+import glob
 import pandas as pd
 import numpy as np
-import glob
+from scipy.stats import t
 import matplotlib.pyplot as plt
 
 
-def read_and_prepare_data(file_path, columns_to_drop):
+def read_and_prepare_data(file_path, columns_to_drop, resample):
     """Read CSV file, drop specified columns, and set 'datetime' as index."""
-    df = pd.read_csv(file_path, parse_dates=['datetime'])
+    
+    df = pd.read_csv(file_path, parse_dates=['datetime'], low_memory=False, delimiter=',')
+
+    df = df.iloc[:, :6]
+
     df.drop(columns=df.columns[columns_to_drop], inplace=True)
+    
+    if df['datetime'].dtype != 'datetime64[ns]':
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M')   
     df.set_index('datetime', inplace=True)
+    
+    df.iloc[:,0] = pd.to_numeric(df.iloc[:,0], errors='coerce')
+
+    
+    df.rename(columns={df.columns[0]:f'mean_{resample}'}, inplace=True)
+    
+    df = df.resample(resample).mean()
+    
     return df
 
-def calculate_ci(df, window, alpha):
+def calculate_ci(df, window, min_periods, alpha):
     """Calculate moving average and margin of error envelope."""
-    rolling = df.rolling(window, min_periods=30)
+    rolling = df.rolling(window, min_periods=min_periods)
     ma = rolling.mean().values.squeeze()
     std = rolling.std().values.squeeze()
     count = rolling.count().values.squeeze()
     degrees_freedom = np.maximum(count-1, 0)
-    t_critical = np.where((count>1), t.ppf(1 - 0.05/2, degrees_freedom), np.nan)
+    t_critical = np.where((count>1), t.ppf(1 - alpha/2, degrees_freedom), np.nan)
     mask = (~np.isnan(t_critical)) & (~np.isnan(std)) & (count>0)
     moe = np.where(mask, t_critical * std / np.sqrt(count), np.nan)
     df[f'ma_{window}'] = ma
@@ -28,8 +44,8 @@ def calculate_ci(df, window, alpha):
     df[f'{label}_bool'] = df.iloc[:,0] > upperci
     return df
 
-def calculate_percentile(df, window, percentile):
-    rolling = df.iloc[:,0].rolling(window, min_periods=30)
+def calculate_percentile(df, window, min_periods, percentile):
+    rolling = df.iloc[:,0].rolling(window, min_periods=min_periods)
     q = percentile/100
     percentile_threshold = rolling.quantile(q=q).values.squeeze()
     label=f'percentile{percentile}'
@@ -37,8 +53,8 @@ def calculate_percentile(df, window, percentile):
     df[f'{label}_bool'] = df.iloc[:,0] > df[label]
     return df
 
-def calculate_iqr_outlier(df, window):
-    rolling = df.iloc[:,0].rolling(window, min_periods=30)
+def calculate_iqr_outlier(df, window, min_periods):
+    rolling = df.iloc[:,0].rolling(window, min_periods=min_periods)
     q3 = rolling.quantile(q=0.75).values.squeeze()
     q1 = rolling.quantile(q=0.25).values.squeeze()
     iqr_outlier = (q3 - q1) * 1.5
@@ -46,26 +62,27 @@ def calculate_iqr_outlier(df, window):
     df['iqr_outlier_bool'] = df.iloc[:,0] > df['iqr_outlier']
     return df
 
-def process_gauge_data(gauge, data_type, columns_to_drop=[0,1,3,5], resample='1D', window='90D', alpha=0.05, percentile=95):
+def process_gauge_data(gauge, data_type, columns_to_drop=[0,1,3,5], resample='1D', window='90D', min_periods='30', alpha=0.05):
     """Process gauge data based on type ('gh' or 'sf')."""
     if data_type == 'gauge height':
         file_path = glob.glob(f'../Data/stream_gauges/gauge_height/{gauge}*.csv')[0]
     else:
         file_path = glob.glob(f'../Data/stream_gauges/streamflow/{gauge}*.csv')[0]
-    df = read_and_prepare_data(file_path, columns_to_drop)
-    df.rename(columns={df.columns[0]:f'mean_{resample}'}, inplace=True)
-    df = df.resample(resample).mean()
-    df = calculate_ci(df, window, alpha)
-    df = calculate_percentile(df, window, percentile)
-    df = calculate_iqr_outlier(df, window)
+    df = read_and_prepare_data(file_path, columns_to_drop, resample)
+    df = calculate_ci(df, window, min_periods, alpha)
+    df = calculate_percentile(df, window, min_periods, 90)
+    df = calculate_percentile(df, window, min_periods, 95)
+    # df = calculate_iqr_outlier(df, window, min_periods)
     return df
 
 
 def create_subplot_axes(nrows):
     """Dynamically create subplot axes based on the number of rows."""
     fig, axes = plt.subplots(nrows=nrows, ncols=1, sharex=True, figsize=(7, 4*nrows))
-    if nrows == 1:
-        axes = [axes]  # Ensure axes is always a list for consistency
+    # if nrows == 1:
+    #     # axes = [axes]  # Ensure axes is always a list for consistency
+    #     axes = np.array(axes).reshape(-1)
+    # axes = np.array(axes).reshape(-1)
     return fig, axes
 
 
@@ -85,3 +102,15 @@ def assign_frequencies(df, series, gauge_id):
         if index not in df.columns:
             df[index] = np.nan
         df.loc[df['site_no'] == gauge_id, index] = row
+
+
+def stream_gauge_minimum_days(df, timedelta_columns, indicator_columns, minimum_days_range):
+    for td, ind in zip(timedelta_columns, indicator_columns):
+        min_td_mask = df[td].dt.days < minimum_days_range
+        df.loc[min_td_mask, ind] = 0
+    return df
+
+
+def gauge_data_minimum_measurments(series, window, min_measurements):
+    counts = series.rolling(window).count()
+    return counts.max().item() >= min_measurements
