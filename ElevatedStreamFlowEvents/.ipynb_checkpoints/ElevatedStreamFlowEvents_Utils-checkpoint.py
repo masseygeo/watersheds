@@ -71,7 +71,7 @@ def process_gauge_data(gauge, data_type, columns_to_drop=[0,1,3,5], resample='1D
     df = read_and_prepare_data(file_path, columns_to_drop, resample)
     df = calculate_ci(df, window, min_periods, alpha)
     df = calculate_percentile(df, window, min_periods, 90)
-    df = calculate_percentile(df, window, min_periods, 95)
+    df = calculate_percentile(df, window, min_periods, 99)
     # df = calculate_iqr_outlier(df, window, min_periods)
     return df
 
