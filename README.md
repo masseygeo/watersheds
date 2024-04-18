@@ -18,12 +18,15 @@ Our approach and workflow was completed in the following order (see linked folde
 3. [WatershedClustering](./WatershedClustering)
     1. [ZonalStatistics](./WatershedClustering/ZonalStatistics.ipynb)
         1. *Aggregate statistics of terrain features for each watershed, and save as .csv files.*
-    2. [PCA]
-        1. *Merge aggregated statistics .csv files by watershed ID into single dataframe, normalize each attribute, and reduce dimensionality using princiapl component analysis (PCA).*
-    3. Clustering_KMeans
-    4. Clustering_DBSCAN
-    5. Clustering_HDBSCAN
+    2. PCA (Praneeth & Seun)
+    3. Clustering_KMeans (Praneeth)
+    4. Clustering_DBSCAN (Praneeth & Seun)
+    5. Clustering_HDBSCAN (Seun)
 4. [ElevatedStreamFlowEvents](./ElevatedStreamFlowEvents)
     1. [ELevatedStreamFlowEvents](./ElevatedStreamFlowEvents/ElevatedStreamFlowEvents.ipynb)
         1. *Plot stream gauge locations and watersheds, filter out stream gauges with insufficient data, plot hydrograph data for all suitable stream gauges in each watershed, identify elevated stream flow events based on threshold values, and plot watershed choropleth maps for event counts.*
-    3. Correlation...
+5. StatisticalComparison
+    1. FinalMapProducts
+        1. *Plot watershed hydrograph data with frequency information, choropleth maps of watersheds symbolized by "event" frequencies and cluster labels.*
+    3. ComparitiveAnalysis
+        1. *Exploratory ANOVA to check if any cluster groups have signficantly different average "elevated stream flow event" frequencies. Post-hoc Tukey HSD pairwise comparison tests performed to identify group(s) if ANOVA is signficant.* 
