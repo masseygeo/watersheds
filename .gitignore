@@ -4,3 +4,4 @@ Data/nhd/nhd_shapefiles
 Data/stream_gauges/gauge_height/*.csv
 Data/stream_gauges/streamflow/*.csv
 ElevatedStreamFlowEvents/watershed_hydrographs/*.jpg
+TerrainFeatures/terrain_features/*.tif
