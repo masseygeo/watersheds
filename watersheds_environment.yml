@@ -6,13 +6,14 @@ dependencies:
   - python
   - gdal
   - geopandas
+  - jupyterlab
   - matplotlib
   - numpy
   - pandas
   - rasterio
+  - rasterstats
   - richdem
+  - seaborne
   - scikit-learn
   - scipy
-  - jupyterlab
-  - rasterstats
   - whitebox
