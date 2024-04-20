@@ -5,3 +5,4 @@ Data/stream_gauges/gauge_height/*.csv
 Data/stream_gauges/streamflow/*.csv
 ElevatedStreamFlowEvents/watershed_hydrographs/*.jpg
 TerrainFeatures/terrain_features/*.tif
+TerrainFeatures/terrain_features/arcgis_pro_original/*.tif
