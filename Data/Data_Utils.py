@@ -16,6 +16,25 @@ from rasterio.merge import merge
 import glob
 
 
+def is_url_valid(url):
+    
+    response = requests.head(url, allow_redirects=True)
+    
+    return response.status_code == 200
+
+
+
+
+def get_tile_footprint(path):
+    with rasterio.open(path) as tile:
+        bounds = tile.bounds
+        x_vertices = [bounds.left, bounds.right, bounds.right, bounds.left, bounds.left]
+        y_vertices = [bounds.bottom, bounds.bottom, bounds.top, bounds.top, bounds.bottom]
+        return x_vertices, y_vertices
+
+
+
+
 def get_stream_gauge_locations(save_dir, data='gage height', state='ky', begin_date='1950-10-01', end_date=datetime.today().strftime('%Y-%m-%d')):
 
     if data == 'gage height':
@@ -55,6 +74,7 @@ def get_stream_gauge_locations(save_dir, data='gage height', state='ky', begin_d
                 textfile.write(line + '\n')
 
     return data_path
+
 
 
 def get_stream_gage_data(gage_id, save_dir, data='gage height', begin_date='1950-10-01', end_date=datetime.today().strftime('%Y-%m-%d')):
@@ -119,7 +139,8 @@ def get_stream_gage_data(gage_id, save_dir, data='gage height', begin_date='1950
     
 
 
-def mosaic_dem_tiles(input_dir, output_path):
+
+def mosaic_dem_tiles(tiles_paths, output_path):
     """
     Function to merge multiple geotiff files and save as new, single geotiff.
 
@@ -135,7 +156,7 @@ def mosaic_dem_tiles(input_dir, output_path):
     None.
 
     """
-    tiles_paths = glob.glob(os.path.join(input_dir, '*.tif'))
+    # tiles_paths = glob.glob(os.path.join(input_dir, '*.tif'))
 
     tiles_datasets = []
 
@@ -160,8 +181,3 @@ def mosaic_dem_tiles(input_dir, output_path):
         dem.close()
 
 
-def is_url_valid(url):
-    
-    response = requests.head(url, allow_redirects=True)
-    
-    return response.status_code == 200
