@@ -1,4 +1,4 @@
-# Clustering Kentucky Watershed Landscapes And Comparison With Elevated Stream Flow Event Frequencies
+# Clustering Kentucky Watershed Terrains And Comparison With Their High Stream Flow Event Frequencies
 
 ***Matt Massey, Seun Adekunle, & Praneeth Bhatt***
 
@@ -25,7 +25,7 @@ Our approach and workflow was completed in the following order (see linked folde
 4. [ElevatedStreamFlowEvents](./ElevatedStreamFlowEvents)
     1. [ELevatedStreamFlowEvents](./ElevatedStreamFlowEvents/ElevatedStreamFlowEvents.ipynb)
         1. *Plot stream gauge locations and watersheds, filter out stream gauges with insufficient data, plot hydrograph data for all suitable stream gauges in each watershed, identify elevated stream flow events based on threshold values, and plot watershed choropleth maps for event counts.*
-5. StatisticalComparison
+5. [StatisticalComparison](./StatisticalComparison)
     1. FinalMapProducts
         1. *Plot watershed hydrograph data with frequency information, choropleth maps of watersheds symbolized by "event" frequencies and cluster labels.*
     3. ComparitiveAnalysis
