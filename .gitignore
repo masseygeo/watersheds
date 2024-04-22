@@ -4,6 +4,9 @@ Data/nhd/nhd_shapefiles/*.*
 Data/nhdplus_hr/*.gdb
 Data/stream_gauges/gauge_height/*.csv
 Data/stream_gauges/streamflow/*.csv
-ElevatedStreamFlowEvents/watershed_hydrographs/*.jpg
+StreamFlowEvents/discharge_hydrographs/*.jpg
+StreamFlowEvents/discharge_highflowevents/*.jpg
+StreamFlowEvents/stage_hydrographs/*.jpg
+StreamFlowEvents/stage_highflowevents/*.jpg
 TerrainFeatures/terrain_features/*.tif
 TerrainFeatures/terrain_features/arcgis_pro_original/*.tif

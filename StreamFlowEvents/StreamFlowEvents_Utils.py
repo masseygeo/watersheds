@@ -104,10 +104,10 @@ def assign_frequencies(df, series, gauge_id):
         df.loc[df['site_no'] == gauge_id, index] = row
 
 
-def stream_gauge_minimum_days(df, timedelta_columns, indicator_columns, minimum_days_range):
-    for td, ind in zip(timedelta_columns, indicator_columns):
-        min_td_mask = df[td].dt.days < minimum_days_range
-        df.loc[min_td_mask, ind] = 0
+def stream_gauge_minimum_days(df, datetime_columns, indicator_columns, minimum_days_range):
+    for dt, ind in zip(datetime_columns, indicator_columns):
+        min_dt_mask = df[dt].dt.days < minimum_days_range
+        df.loc[min_dt_mask, ind] = 0
     return df
 
 
