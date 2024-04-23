@@ -5,22 +5,7 @@ from scipy.stats import t
 import matplotlib.pyplot as plt
 
 
-def get_timegap_indices(df, timegap_threshold):
-    """Funciton to identify time gaps in timeseries and return start and end indices of gaps."""
-    
-    # get only non-null values (resample still keeps all data even if null and causes problems for diff)
-    df_notna = df[df.notna().all(axis=1)]
 
-    # calculate timedelta between observations
-    diff = df_notna.index.diff()
-
-    # get ending datetime indices for time gaps
-    end_gap_idx = df_notna[diff > pd.Timedelta(timegap_threshold)].index
-
-    # get list of locational positions (integers) for start indices of time gaps
-    start_gap_idx = [df_notna.index.get_loc(end) - 1 for end in end_gap_idx]
-
-    return end_gap_idx, start_gap_idx
 
 
 
@@ -46,6 +31,7 @@ def read_and_prepare_data(file_path, columns_to_drop, resample):
     
     return df
 
+
 def calculate_ci(df, window, min_periods, alpha):
     """Calculate moving average and margin of error envelope."""
     rolling = df.rolling(window, min_periods=min_periods)
@@ -63,6 +49,7 @@ def calculate_ci(df, window, min_periods, alpha):
     df[f'{label}_bool'] = df.iloc[:,0] > upperci
     return df
 
+
 def calculate_percentile(df, window, min_periods, percentile):
     rolling = df.iloc[:,0].rolling(window, min_periods=min_periods)
     q = percentile/100
@@ -72,14 +59,8 @@ def calculate_percentile(df, window, min_periods, percentile):
     df[f'{label}_bool'] = df.iloc[:,0] > df[label]
     return df
 
-def calculate_iqr_outlier(df, window, min_periods):
-    rolling = df.iloc[:,0].rolling(window, min_periods=min_periods)
-    q3 = rolling.quantile(q=0.75).values.squeeze()
-    q1 = rolling.quantile(q=0.25).values.squeeze()
-    iqr_outlier = (q3 - q1) * 1.5
-    df['iqr_outlier'] = q3 + iqr_outlier
-    df['iqr_outlier_bool'] = df.iloc[:,0] > df['iqr_outlier']
-    return df
+
+
 
 def process_gauge_data(gauge, data_type, columns_to_drop=[0,1,3,5], resample='1D', window='90D', min_periods='30', alpha=0.05):
     """Process gauge data based on type ('gh' or 'sf')."""
@@ -91,8 +72,8 @@ def process_gauge_data(gauge, data_type, columns_to_drop=[0,1,3,5], resample='1D
     df = calculate_ci(df, window, min_periods, alpha)
     df = calculate_percentile(df, window, min_periods, 90)
     df = calculate_percentile(df, window, min_periods, 99)
-    # df = calculate_iqr_outlier(df, window, min_periods)
     return df
+
 
 
 def create_subplot_axes(nrows):
@@ -103,6 +84,7 @@ def create_subplot_axes(nrows):
     #     axes = np.array(axes).reshape(-1)
     # axes = np.array(axes).reshape(-1)
     return fig, axes
+
 
 
 def get_frequencies(df, resample='1YE', data_type='gauge height'):
@@ -123,11 +105,13 @@ def assign_frequencies(df, series, gauge_id):
         df.loc[df['site_no'] == gauge_id, index] = row
 
 
+
 def stream_gauge_minimum_days(df, datetime_columns, indicator_columns, minimum_days_range):
     for dt, ind in zip(datetime_columns, indicator_columns):
         min_dt_mask = df[dt].dt.days < minimum_days_range
         df.loc[min_dt_mask, ind] = 0
     return df
+
 
 
 def gauge_data_minimum_measurments(series, window, min_measurements):
