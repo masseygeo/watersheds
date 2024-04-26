@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 
-def read_and_prepare_data(file_path, columns_to_drop, resample):
+def read_and_prepare_data(file_path, columns_to_drop, resample, log_transform=False):
     """Read CSV file, drop specified columns, and set 'datetime' as index."""
     
     df = pd.read_csv(file_path, parse_dates=['datetime'], low_memory=False, delimiter=',')
@@ -24,10 +24,12 @@ def read_and_prepare_data(file_path, columns_to_drop, resample):
     
     df.iloc[:,0] = pd.to_numeric(df.iloc[:,0], errors='coerce')
 
-    
     df.rename(columns={df.columns[0]:f'mean_{resample}'}, inplace=True)
     
     df = df.resample(resample).mean()
+
+    if log_transform:
+        df.iloc[:,0] = np.log1p(df.iloc[:,0])
     
     return df
 
