@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 
-def read_and_prepare_data(file_path, columns_to_drop=[0,1,3,5], resample='1d', log_transform=True):
+def read_and_prepare_data(file_path, columns_to_drop=[0,1,3,5], resample='1d'):
     """Read CSV file, drop specified columns, and set 'datetime' as index."""
     
     df = pd.read_csv(file_path, parse_dates=['datetime'], low_memory=False, delimiter=',')
@@ -29,11 +29,12 @@ def read_and_prepare_data(file_path, columns_to_drop=[0,1,3,5], resample='1d', l
     
     df = df.resample(resample).mean()
 
-    if log_transform:
-        df[df <= 0] = 0.001  # Avoid taking log of zero or negative values
-        df = np.log10(df.iloc[:,0])  # Log transformation, preserving NaNs
+    # do log transformation after interpolation...not before...to fill in zero values better
+    # if log_transform:
+    #     df[df <= 0] = 0.001  # Avoid taking log of zero or negative values
+    #     df = np.log10(df.iloc[:,0])  # Log transformation, preserving NaNs
     
-    return df.to_frame()
+    return df
 
 
 def calculate_ci(df, window, min_periods, alpha):
