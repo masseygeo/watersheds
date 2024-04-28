@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 
-def read_and_prepare_data(file_path, columns_to_drop, resample, log_transform=False):
+def read_and_prepare_data(file_path, columns_to_drop=[0,1,3,5], resample='1d', log_transform=True):
     """Read CSV file, drop specified columns, and set 'datetime' as index."""
     
     df = pd.read_csv(file_path, parse_dates=['datetime'], low_memory=False, delimiter=',')
@@ -19,7 +19,8 @@ def read_and_prepare_data(file_path, columns_to_drop, resample, log_transform=Fa
     df.drop(columns=df.columns[columns_to_drop], inplace=True)
     
     if df['datetime'].dtype != 'datetime64[ns]':
-        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M')   
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M')
+        
     df.set_index('datetime', inplace=True)
     
     df.iloc[:,0] = pd.to_numeric(df.iloc[:,0], errors='coerce')
@@ -29,9 +30,10 @@ def read_and_prepare_data(file_path, columns_to_drop, resample, log_transform=Fa
     df = df.resample(resample).mean()
 
     if log_transform:
-        df.iloc[:,0] = np.log1p(df.iloc[:,0])
+        df[df <= 0] = 0.001  # Avoid taking log of zero or negative values
+        df = np.log10(df.iloc[:,0])  # Log transformation, preserving NaNs
     
-    return df
+    return df.to_frame()
 
 
 def calculate_ci(df, window, min_periods, alpha):
