@@ -1,6 +1,7 @@
 Data/dem_10m/*.tif
 Data/ky_boundaries/boundaries_shapefiles/*.*
 Data/nhd/nhd_shapefiles/*.*
+Data/nhdplus_hr/*.zip
 Data/nhdplus_hr/*.gdb
 Data/stream_gauges/gauge_height/*.csv
 Data/stream_gauges/streamflow/*.csv
